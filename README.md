@@ -2,144 +2,247 @@
 Data analysis project  shows a customer behaviour analysis python, sql and power BI
 # 📊 Data Analytics Project
 
+# Customer Data Analysis Project
+
 ## Overview
-This project demonstrates an end-to-end Data Analytics workflow, starting from data collection and preparation to business insights and dashboard creation. The project includes data loading using Python, Exploratory Data Analysis (EDA), data cleaning, SQL-based analysis, Power BI dashboard development, and reporting.
 
-The goal is to transform raw data into actionable insights that support data-driven decision-making.
+This project focuses on analyzing customer shopping behavior using **Python, PostgreSQL, SQL, and Power BI**. The objective is to extract meaningful business insights from customer purchase data and understand spending patterns, demographic trends, and discount effectiveness.
 
----
-
-## Dataset
-**Dataset Name:** [Dataset Name]
-
-**Source:** [Kaggle / Company Data / Public Dataset]
-
-**Description:**
-The dataset contains information related to [sales, customers, products, transactions, etc.]. It is used to analyze trends, customer behavior, business performance, and key metrics.
-
-**Key Features:**
-- Customer Information
-- Product Details
-- Sales Transactions
-- Revenue Metrics
-- Time-Based Data
+The project demonstrates a complete data analytics workflow, including data cleaning, database management, SQL querying, exploratory data analysis, and dashboard creation.
 
 ---
 
-## Tools & Technologies
+## Business Problem
 
-| Tool | Purpose |
-|--------|----------|
-| Python | Data Loading, Cleaning, EDA |
-| Pandas | Data Manipulation |
-| NumPy | Numerical Operations |
-| Data Visualization |
-| PostgreSQL | Data Storage & Querying |
-| SQL | Business Analysis Queries |
-| Power BI | Interactive Dashboard |
-| Gamma | Presentation Creation |
-| Git & GitHub | Version Control |
+Retail and e-commerce companies collect large amounts of customer transaction data. However, raw data alone cannot help businesses make informed decisions.
+
+This project aims to answer key business questions such as:
+
+* Which customer segments generate the highest revenue?
+* How do discounts influence purchasing behavior?
+* Which product categories perform the best?
+* What demographic groups contribute most to sales?
+* How can businesses improve marketing and sales strategies using customer insights?
 
 ---
 
 ## Project Workflow
 
-### 1. Data Loading
-- Imported dataset into Python.
-- Examined structure, columns, and data types.
-
-### 2. Data Cleaning
-- Handled missing values.
-- Removed duplicate records.
-- Corrected data types.
-- Standardized column names.
-
-### 3. Exploratory Data Analysis (EDA)
-- Analyzed distributions and trends.
-- Identified outliers and anomalies.
-- Generated visualizations for better understanding.
-
-### 4. Database Integration
-- Connected Python with PostgreSQL/MySQL/SQL Server.
-- Loaded cleaned dataset into the database.
-
-### 5. SQL Analysis
-Performed business-focused SQL queries such as:
-- Revenue Analysis
-- Customer Segmentation
-- Top-Selling Products
-- Regional Performance
-- Discount Impact Analysis
-
-### 6. Dashboard Development
-Built an interactive Power BI dashboard containing:
-- KPI Cards
-- Revenue Trends
-- Customer Insights
-- Product Performance
-- Regional Analysis
-- Filters & Slicers
-
-### 7. Reporting & Presentation
-- Created a detailed project report.
-- Designed a professional presentation using Gamma.
+Dataset (CSV)
+↓
+Python Data Cleaning & Preprocessing
+↓
+PostgreSQL Database
+↓
+SQL Analysis
+↓
+Power BI Dashboard
+↓
+Business Insights & Recommendations
 
 ---
 
-## Dashboard Preview
+## Dataset Information
 
-### Key Metrics
-- Total Revenue
-- Total Orders
-- Average Order Value
-- Customer Count
-- Top Products
+**Dataset:** Customer Shopping Behavior Dataset
 
-### Visualizations
-- Sales Trend Analysis
-- Product Performance Chart
-- Customer Segmentation
-- Revenue by Region
-- Category-wise Analysis
+### Key Features
+
+* Customer ID
+* Age
+* Gender
+* Category
+* Purchase Amount
+* Review Rating
+* Subscription Status
+* Payment Method
+* Discount Applied
+* Frequency of Purchases
 
 ---
 
-## Key Findings
+## Technologies Used
 
-Some important insights derived from the analysis:
+### Programming & Analysis
 
-- Revenue showed significant growth during peak periods.
-- A small group of customers contributed a large portion of total sales.
-- Certain product categories consistently outperformed others.
-- Discount campaigns increased order volume but impacted profit margins.
-- Regional performance varied significantly across locations.
+* Python
+* Pandas
+* NumPy
+* Jupyter Notebook
+
+### Database
+
+* PostgreSQL
+* SQL
+
+### Data Visualization
+
+* Power BI
+
+### Version Control
+
+* Git
+* GitHub
 
 ---
 
 ## Project Structure
 
 ```text
-Data-Analytics-Project/
+Customer_data_analysis/
 │
 ├── data/
-│   ├── raw_data.csv
-│   └── cleaned_data.csv
+│   └── customer_shopping_behavior.csv
 │
 ├── notebooks/
-│   └── eda_analysis.ipynb
+│   └── customer_data_behaviour_analysis.ipynb
 │
 ├── sql/
-│   └── business_queries.sql
+│   └── customer_data_analysis.sql
 │
 ├── dashboard/
-│   └── powerbi_dashboard.pbix
-│
-├── reports/
-│   ├── project_report.pdf
-│   └── presentation.pptx
+│   └── customer_dashboard.pbix
 │
 ├── images/
-│   └── dashboard_screenshots/
+│   └── dashboard_preview.png
 │
-├── requirements.txt
 └── README.md
+```
+
+---
+
+## SQL Analysis Performed
+
+Some key analytical questions answered:
+
+### Revenue Analysis
+
+* Total revenue by gender
+* Revenue by product category
+* Revenue by customer segment
+
+### Customer Behavior Analysis
+
+* Average purchase amount
+* High-value customers
+* Frequent shoppers
+* Discount impact analysis
+
+### Product Performance
+
+* Top-selling categories
+* Highest revenue-generating products
+
+### Advanced Queries
+
+* Aggregate functions
+* Subqueries
+* Group By analysis
+* Window functions (if implemented)
+
+---
+
+## Dashboard Features
+
+The Power BI dashboard provides:
+
+* Total Revenue Overview
+* Sales by Category
+* Gender-wise Revenue Analysis
+* Discount Usage Analysis
+* Customer Purchase Trends
+* Interactive Filters and Slicers
+
+---
+
+## Key Insights
+
+### Customer Insights
+
+* Female and male spending patterns can be compared.
+* High-value customers contribute a significant portion of total revenue.
+* Certain age groups show higher purchasing activity.
+
+### Sales Insights
+
+* Some product categories consistently outperform others.
+* Discounts can increase purchase frequency but may affect profitability.
+
+### Business Recommendations
+
+* Target high-value customer segments.
+* Optimize discount campaigns.
+* Focus marketing efforts on top-performing categories.
+* Develop retention strategies for frequent customers.
+
+---
+
+## How to Run the Project
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/your-username/Customer_data_analysis.git
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install pandas numpy matplotlib seaborn sqlalchemy psycopg2
+```
+
+### 3. Open Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+### 4. Import Dataset
+
+Load the CSV dataset into Python for cleaning and preprocessing.
+
+### 5. Create PostgreSQL Database
+
+Import cleaned data into PostgreSQL.
+
+### 6. Execute SQL Queries
+
+Run the SQL scripts available in the project.
+
+### 7. Open Power BI Dashboard
+
+Open the `.pbix` file to explore interactive visualizations.
+
+---
+
+## Future Improvements
+
+* Customer Segmentation Analysis
+* RFM Analysis
+* Customer Lifetime Value (CLV)
+* Sales Forecasting
+* Predictive Analytics using Machine Learning
+* Automated Dashboard Refresh
+
+---
+
+## Author
+
+**Yash Baghel**
+
+Aspiring Data Analyst skilled in:
+
+* Python
+* SQL
+* PostgreSQL
+* Power BI
+* Data Visualization
+* Business Analytics
+
+GitHub: https://github.com/yashbaghel12th-bit
+
+---
+
+## License
+
+This project is intended for educational and portfolio purposes.
